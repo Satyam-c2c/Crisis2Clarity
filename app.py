@@ -1,5 +1,12 @@
 import streamlit as st
 
+st.set_page_config(
+    page_title="Crisis2Clarity AI",
+    page_icon="🎯",
+    layout="wide",
+    initial_sidebar_state="collapsed"
+)
+
 from c2c_engine import analyze_problem
 from c2c_ml import predict_category
 
@@ -17,12 +24,6 @@ def get_urgency_color(urgency):
     else:
         return "#60A5FA"
 
-st.set_page_config(
-    page_title="Crisis2Clarity AI",
-    page_icon="🎯",
-    layout="wide",
-    initial_sidebar_state="collapsed"
-)
 
 # ---------- CUSTOM DARK THEME ----------
 st.markdown("""
