@@ -9,7 +9,7 @@
   "theme_color": "#111827",
   "icons": [
     {
-      "src": "c2c_logo.png",
+      "src": "../c2c_logo.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
