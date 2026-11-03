@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111827">
+    <meta name="description" content="Crisis2Clarity AI - Your student learning and crisis copilot.">
+
+    <title>Crisis2Clarity AI</title>
+
+    <link rel="manifest" href="manifest.webmanifest">
+    <link rel="icon" href="c2c_logo.png">
+</head>
+
+<body>
+    <h1>Crisis2Clarity AI</h1>
+    <p>Your student learning and crisis copilot.</p>
+
+    <p>Opening your app...</p>
+
+    <script>
+        if ("serviceWorker" in navigator) {
+            window.addEventListener("load", () => {
+                navigator.serviceWorker.register("service-worker.js");
+            });
+        }
+
+        window.location.href =
+            "https://crisis2clarity-hg7jaxr5aqmamdihfzvvbm.streamlit.app/";
+    </script>
+</body>
+</html>
