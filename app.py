@@ -2,7 +2,7 @@ import streamlit as st
 
 st.set_page_config(
     page_title="Crisis2Clarity AI",
-    page_icon="c2c_logo2.jpg",
+    page_icon="c2c_logo2.png",
     layout="wide",
     initial_sidebar_state="collapsed"
 )
