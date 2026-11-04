@@ -210,35 +210,35 @@ def analyze_problem(problem):
       "action_plan": (
             (
                 [
-                    "Step 1 (5 min): Read the assignment questions carefully.",
-                    "Step 2 (10 min): Identify the topics and concepts required."
+                    "Read the assignment questions carefully (5 min).",
+                    "Identify the topics and concepts required (10 min)."
                 ]
                 if "Assignment" in detected_intents else []
             )
             +
             (
                 [
-                    "Step 3 (10 min): Review the basic concept of the difficult topic.",
-                    "Step 4 (15 min): Solve one easy example step by step.",
-                    "Step 5 (20 min): Try two similar questions independently."
+                    "Review the basic concept of the difficult topic (10 min).",
+                    "Solve one easy example step by step (15 min).",
+                    "Try two similar questions independently (20 min)."
                 ]
                 if "Learning Difficulty" in detected_intents else []
             )
             +
             (
                 [
-                    "Step 6 (10 min): Prioritize the work due tomorrow.",
-                    "Step 7 (25 min): Complete the most urgent task first.",
-                    "Step 8 (5 min): Review your progress."
+                    "Prioritize the work due tomorrow (10 min).",
+                    "Complete the most urgent task first (25 min).",
+                    "Review your progress (5 min)."
                 ]
                 if "Deadline / Exam" in detected_intents else []
             )
             if detected_intents
             else [
-                "Step 1 (5 min): List the tasks you need to complete.",
-                "Step 2 (15 min): Choose your most important task.",
-                "Step 3 (25 min): Work on that task without distractions.",
-                "Step 4 (5 min): Review your progress."
+                "List the tasks you need to complete (5 min).",
+                "Choose your most important task (15 min).",
+                "Work on that task without distractions (25 min).",
+                "Review your progress (5 min)."
             ]
         ),
         "topic_guidance": topic_guidance
