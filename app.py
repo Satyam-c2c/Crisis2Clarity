@@ -28,17 +28,30 @@ def get_urgency_color(urgency):
 # ---------- CUSTOM DARK THEME ----------
 st.markdown("""
 <style>
+
+/* Main application background */
 .stApp {
     background: linear-gradient(135deg, #080e1c 0%, #0c1426 55%, #101b31 100%);
     color: #edf4ff;
 }
 
+/* Remove white top header background */
+header[data-testid="stHeader"] {
+    background: transparent !important;
+}
+
+[data-testid="stToolbar"] {
+    background: transparent !important;
+}
+
+/* Main content spacing */
 .block-container {
     max-width: 1100px;
-    padding-top: 2.5rem;
+    padding-top: 1.5rem;
     padding-bottom: 3rem;
 }
 
+/* Headings and text */
 h1, h2, h3 {
     color: #f3f7ff !important;
     letter-spacing: -0.5px;
@@ -48,6 +61,7 @@ p, label, li {
     color: #c2cde0;
 }
 
+/* Hero section */
 .hero {
     padding: 30px;
     border: 1px solid #243755;
@@ -56,18 +70,9 @@ p, label, li {
     margin-bottom: 25px;
 }
 
-.eyebrow {
-    color: #60a5fa;
-    font-size: 0.8rem;
-    font-weight: 700;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-}
-
 .hero-title {
     font-size: clamp(2rem, 5vw, 3.2rem);
     font-weight: 800;
-    margin: 10px 0;
     color: #ffffff;
 }
 
@@ -77,6 +82,7 @@ p, label, li {
     line-height: 1.7;
 }
 
+/* Panels */
 .panel {
     background: #111c30;
     border: 1px solid #263853;
@@ -85,71 +91,7 @@ p, label, li {
     margin: 12px 0;
 }
 
-.metric-card {
-    background: linear-gradient(145deg, #142440, #101a2c);
-    border: 1px solid #2b4164;
-    border-radius: 16px;
-    padding: 20px;
-    min-height: 125px;
-}
-
-.metric-label {
-    color: #9fb2ce;
-    font-size: 0.85rem;
-    margin-bottom: 10px;
-}
-
-.metric-value {
-    color: #70b7ff;
-    font-size: 1.4rem;
-    font-weight: 750;
-    overflow-wrap: anywhere;
-}
-
-
-div[data-testid="stTextArea"] textarea {
-    background-color: #0b1424 !important;
-    color: #f0f6ff !important;
-    border: 1px solid #344968 !important;
-    border-radius: 12px !important;
-}
-
-div[data-testid="stTextArea"] textarea:focus {
-    border-color: #3b82f6 !important;
-    box-shadow: 0 0 0 1px #3b82f6 !important;
-}
-
-.stButton > button {
-    background: linear-gradient(90deg, #2563eb, #3b82f6);
-    color: white;
-    border: 0;
-    border-radius: 11px;
-    padding: 0.7rem 1.2rem;
-    font-weight: 700;
-    min-height: 48px;
-    transition: 0.2s ease;
-}
-
-.stButton > button:hover {
-    background: linear-gradient(90deg, #1d4ed8, #2563eb);
-    border: 1px solid #60a5fa;
-}
-
-div[data-testid="stAlert"] {
-    border-radius: 12px;
-}
-
-hr {
-    border-color: #263853;
-}
-
-.footer {
-    text-align: center;
-    color: #7386a3;
-    font-size: 0.82rem;
-    padding-top: 30px;
-}
-/* Dashboard polish */
+/* Dashboard cards */
 .metric-card {
     background: linear-gradient(145deg, #172b49, #101c30);
     border: 1px solid #355781;
@@ -178,6 +120,37 @@ hr {
     overflow-wrap: anywhere;
 }
 
+/* Problem input */
+div[data-testid="stTextArea"] textarea {
+    background-color: #0b1424 !important;
+    color: #f0f6ff !important;
+    border: 1px solid #344968 !important;
+    border-radius: 12px !important;
+}
+
+div[data-testid="stTextArea"] textarea:focus {
+    border-color: #3b82f6 !important;
+    box-shadow: 0 0 0 1px #3b82f6 !important;
+}
+
+/* Buttons */
+.stButton > button {
+    background: linear-gradient(90deg, #2563eb, #3b82f6);
+    color: white;
+    border: 0;
+    border-radius: 11px;
+    padding: 0.7rem 1.2rem;
+    font-weight: 700;
+    min-height: 48px;
+    transition: 0.2s ease;
+}
+
+.stButton > button:hover {
+    background: linear-gradient(90deg, #1d4ed8, #2563eb);
+    border: 1px solid #60a5fa;
+}
+
+/* Action plan and guidance */
 .step-item {
     display: flex;
     align-items: flex-start;
@@ -196,11 +169,30 @@ hr {
     border-color: #60a5fa;
     transform: translateY(-2px);
 }
+
+/* Containers and alerts */
 div[data-testid="stVerticalBlockBorderWrapper"] {
     border-color: #2a4161;
     border-radius: 16px;
+}
 
-    /* Mobile-friendly layout */
+div[data-testid="stAlert"] {
+    border-radius: 12px;
+}
+
+hr {
+    border-color: #263853;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    color: #7386a3;
+    font-size: 0.82rem;
+    padding-top: 30px;
+}
+
+/* Mobile-friendly layout */
 @media (max-width: 768px) {
     .block-container {
         padding-top: 1rem;
@@ -236,7 +228,7 @@ div[data-testid="stVerticalBlockBorderWrapper"] {
         width: 100%;
     }
 }
-}
+
 </style>
 """, unsafe_allow_html=True)
 
