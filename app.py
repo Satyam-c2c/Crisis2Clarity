@@ -229,6 +229,17 @@ hr {
     }
 }
 
+.footer {
+    color: #AAB6CC !important;
+    padding: 16px 0 35px 0 !important;
+    margin-bottom: 20px !important;
+    text-align: center;
+}
+
+.block-container {
+    padding-bottom: 4rem !important;
+}
+
 </style>
 """, unsafe_allow_html=True)
 
