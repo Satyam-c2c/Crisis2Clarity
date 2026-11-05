@@ -231,13 +231,13 @@ hr {
 
 .footer {
     color: #AAB6CC !important;
-    padding: 16px 0 35px 0 !important;
-    margin-bottom: 20px !important;
+    padding: 20px 0 100px 0 !important;
+    margin-bottom: 30px !important;
     text-align: center;
 }
 
 .block-container {
-    padding-bottom: 4rem !important;
+    padding-bottom: 120px !important;
 }
 
 </style>
